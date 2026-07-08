@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Happy Birthday Akshaya! 🎂</title>
+    <meta name="description"
+        content="A special birthday surprise for Akshaya K — open the diary and flip through our memories!">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Caveat:wght@400;600;700&family=Playfair+Display:ital,wght@0,400;0,700;1,400&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="./style.css">
+    <script src="./script.js" defer></script>
+</head>
+
+<body>
+
+    <!-- ======================== STAGE 1: BOOKSHELF ======================== -->
+    <div id="bookshelf-scene">
+        <div id="ambient-light"></div>
+
+        <div id="shelf-container">
+            <!-- Shelf Row 1 -->
+            <div class="shelf-row">
+                <div class="book" style="--h:140px;--c:#7B3F6E;--c2:#5C2A52;"><span>MEMOIRS</span></div>
+                <div class="book" style="--h:128px;--c:#2E5C8A;--c2:#1E3A5F;"><span>STORIES</span></div>
+                <div class="book" style="--h:145px;--c:#5C7A2E;--c2:#3A5220;"><span>DREAMS</span></div>
+                <div class="book" style="--h:132px;--c:#8A5C2E;--c2:#5F3A1E;"><span>MOMENTS</span></div>
+                <div class="book" style="--h:118px;--c:#7A2E5C;--c2:#521E3A;"><span>ECHOES</span></div>
+                <div class="book" style="--h:140px;--c:#2E7A5C;--c2:#1E523A;"><span>WONDER</span></div>
+                <div class="book wide-book" style="--h:136px;--c:#5C2E7A;--c2:#3A1E52;"><span>THE ART OF LIVING</span>
+                </div>
+                <div class="book" style="--h:150px;--c:#7A5C2E;--c2:#52381E;"><span>GRACE</span></div>
+                <div class="book" style="--h:122px;--c:#3A7A6E;--c2:#255249;"><span>PEACE</span></div>
+                <div class="book" style="--h:138px;--c:#6B2E2E;--c2:#451E1E;"><span>LIGHT</span></div>
+            </div>
+            <div class="shelf-plank"></div>
+
+            <!-- Shelf Row 2 — special book lives here -->
+            <div class="shelf-row">
+                <div class="book" style="--h:138px;--c:#4A6B2E;--c2:#30451E;"><span>TALES</span></div>
+                <div class="book" style="--h:125px;--c:#2E4A6B;--c2:#1E3045;"><span>WISDOM</span></div>
+                <div class="book" style="--h:130px;--c:#6B4A2E;--c2:#453019;"><span>VOYAGE</span></div>
+                <!-- THE BIRTHDAY DIARY -->
+                <div id="falling-book" class="book special-book" style="--h:158px;">
+                    <span class="special-title">Birthday<br>Diary</span>
+                    <span class="special-subtitle">✦ Akshu ✦</span>
+                </div>
+                <div class="book" style="--h:140px;--c:#6B3D2E;--c2:#45261E;"><span>MAGIC</span></div>
+                <div class="book" style="--h:128px;--c:#2E6B6B;--c2:#1E4545;"><span>HOPE</span></div>
+                <div class="book wide-book" style="--h:145px;--c:#3D6B2E;--c2:#26451E;"><span>COLLECTED POEMS</span>
+                </div>
+                <div class="book" style="--h:135px;--c:#6B2E5C;--c2:#451E3A;"><span>BLISS</span></div>
+            </div>
+            <div class="shelf-plank"></div>
+
+            <!-- Shelf Row 3 -->
+            <div class="shelf-row">
+                <div class="book" style="--h:142px;--c:#6B4A2E;--c2:#453019;"><span>STARS</span></div>
+                <div class="book wide-book" style="--h:128px;--c:#2E4A6B;--c2:#1E3045;"><span>ATLAS OF JOY</span></div>
+                <div class="book" style="--h:135px;--c:#6B2E5C;--c2:#451E3A;"><span>AURORA</span></div>
+                <div class="book" style="--h:120px;--c:#2E6B4A;--c2:#1E4530;"><span>BLOOM</span></div>
+                <div class="book" style="--h:140px;--c:#5C2E7A;--c2:#3A1E52;"><span>ROOTS</span></div>
+                <div class="book" style="--h:132px;--c:#7A5C2E;--c2:#52381E;"><span>SEASONS</span></div>
+                <div class="book" style="--h:148px;--c:#4A2E6B;--c2:#301E45;"><span>COSMOS</span></div>
+                <div class="book" style="--h:126px;--c:#7A2E2E;--c2:#521E1E;"><span>RIVER</span></div>
+                <div class="book" style="--h:138px;--c:#2E7A5C;--c2:#1E523A;"><span>JOURNEY</span></div>
+            </div>
+            <div class="shelf-plank"></div>
+        </div>
+
+        <div class="particles" aria-hidden="true">
+            <div class="particle"></div>
+            <div class="particle"></div>
+            <div class="particle"></div>
+            <div class="particle"></div>
+            <div class="particle"></div>
+            <div class="particle"></div>
+        </div>
+    </div>
+
+    <!-- ======================== PROMPT OVERLAY ======================== -->
+    <div id="prompt-overlay">
+        <div id="prompt-box">
+            <div class="prompt-icon">📖</div>
+            <p class="prompt-line1">Something's fallen just for you...</p>
+            <p class="prompt-line2">Dare to take a peek inside?</p>
+            <button id="open-btn">Open it ✨</button>
+        </div>
+    </div>
+
+    <!-- ======================== STAGE 2: FLIP BOOK ======================== -->
+    <div id="flipbook-scene" class="hidden">
+
+        <input type="checkbox" id="cover_checkbox" aria-hidden="true">
+        <input type="checkbox" id="page1_checkbox" aria-hidden="true">
+        <input type="checkbox" id="page2_checkbox" aria-hidden="true">
+        <input type="checkbox" id="page3_checkbox" aria-hidden="true">
+        <input type="checkbox" id="page4_checkbox" aria-hidden="true">
+        <input type="checkbox" id="page5_checkbox" aria-hidden="true">
+
+        <div id="flip_book" role="document" aria-label="Akshaya's Birthday Diary">
+
+            <!-- FRONT COVER -->
+            <div class="front_cover" id="cover-clickable" role="button" tabindex="0"
+                aria-label="Open the birthday diary">
+                <div class="cover-inner">
+                    <p class="cover-ornament">— ✦ —</p>
+                    <p class="cover-sub">poor man's effort</p>
+                    <h1 class="cover-title">Birthday<br>Diary</h1>
+                    <div class="cover-line"></div>
+                    <p class="cover-name">Akshaya K</p>
+                    <p class="cover-year">2 0 2 6</p>
+                    <p class="cover-ornament">— ✦ —</p>
+                    <p class="cover-hint">tap to open →</p>
+                </div>
+            </div>
+
+            <!-- PAGE 1 | Front: 1,2 | Back: 3,4 -->
+            <div class="page" id="page1">
+                <div class="front_page">
+                    <div class="polaroid" style="--rot:-3deg;--top:20px;--left:12px;">
+                        <div class="pin"></div>
+                        <div class="pframe"><img src="./pics/1.jpeg" alt="Memory"></div>
+                    </div>
+                    <div class="polaroid" style="--rot:2.5deg;--top:295px;--left:178px;">
+                        <div class="pin"></div>
+                        <div class="pframe"><img src="./pics/2.jpeg" alt="Memory"></div>
+                    </div>
+                </div>
+                <div class="back_page">
+                    <!-- back: visual left 12 → CSS left 184; visual left 178 → CSS left 18 -->
+                    <div class="polaroid" style="--rot:3deg;--top:20px;--left:184px;">
+                        <div class="pin"></div>
+                        <div class="pframe"><img src="./pics/3.jpeg" alt="Memory" class="bimg"></div>
+                    </div>
+                    <div class="polaroid" style="--rot:-2.5deg;--top:295px;--left:18px;">
+                        <div class="pin"></div>
+                        <div class="pframe"><img src="./pics/4.jpeg" alt="Memory" class="bimg"></div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- PAGE 2 | Front: 5,6 | Back: 7,8 -->
+            <div class="page" id="page2">
+                <div class="front_page">
+                    <div class="polaroid" style="--rot:-2deg;--top:24px;--left:14px;">
+                        <div class="pin"></div>
+                        <div class="pframe"><img src="./pics/5.jpeg" alt="Memory"></div>
+                    </div>
+                    <div class="polaroid" style="--rot:4deg;--top:292px;--left:175px;">
+                        <div class="pin"></div>
+                        <div class="pframe"><img src="./pics/6.jpeg" alt="Memory"></div>
+                    </div>
+                </div>
+                <div class="back_page">
+                    <div class="polaroid" style="--rot:2deg;--top:24px;--left:182px;">
+                        <div class="pin"></div>
+                        <div class="pframe"><img src="./pics/7.jpeg" alt="Memory" class="bimg"></div>
+                    </div>
+                    <div class="polaroid" style="--rot:-4deg;--top:292px;--left:21px;">
+                        <div class="pin"></div>
+                        <div class="pframe"><img src="./pics/8.jpeg" alt="Memory" class="bimg"></div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- PAGE 3 | Front: 9,10 | Back: 11,12 -->
+            <div class="page" id="page3">
+                <div class="front_page">
+                    <div class="polaroid" style="--rot:3deg;--top:20px;--left:10px;">
+                        <div class="pin"></div>
+                        <div class="pframe"><img src="./pics/9.jpeg" alt="Memory"></div>
+                    </div>
+                    <div class="polaroid" style="--rot:-3deg;--top:296px;--left:180px;">
+                        <div class="pin"></div>
+                        <div class="pframe"><img src="./pics/10.jpeg" alt="Memory"></div>
+                    </div>
+                </div>
+                <div class="back_page">
+                    <div class="polaroid" style="--rot:-3deg;--top:20px;--left:186px;">
+                        <div class="pin"></div>
+                        <div class="pframe"><img src="./pics/11.jpeg" alt="Memory" class="bimg"></div>
+                    </div>
+                    <div class="polaroid" style="--rot:3deg;--top:296px;--left:16px;">
+                        <div class="pin"></div>
+                        <div class="pframe"><img src="./pics/12.png" alt="Memory" class="bimg"></div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- PAGE 4 | Front: 13,14 | Back: 15,16 -->
+            <div class="page" id="page4">
+                <div class="front_page">
+                    <div class="polaroid" style="--rot:-4deg;--top:22px;--left:14px;">
+                        <div class="pin"></div>
+                        <div class="pframe"><img src="./pics/13.png" alt="Memory"></div>
+                    </div>
+                    <div class="polaroid" style="--rot:2deg;--top:293px;--left:176px;">
+                        <div class="pin"></div>
+                        <div class="pframe"><img src="./pics/14.jpeg" alt="Memory"></div>
+                    </div>
+                </div>
+                <div class="back_page">
+                    <div class="polaroid" style="--rot:4deg;--top:22px;--left:182px;">
+                        <div class="pin"></div>
+                        <div class="pframe"><img src="./pics/15.png" alt="Memory" class="bimg"></div>
+                    </div>
+                    <div class="polaroid" style="--rot:-2deg;--top:293px;--left:20px;">
+                        <div class="pin"></div>
+                        <div class="pframe"><img src="./pics/16.jpeg" alt="Memory" class="bimg"></div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- PAGE 5 | Front: 17,18 | Back: 19,20 -->
+            <div class="page" id="page5">
+                <div class="front_page">
+                    <div class="polaroid" style="--rot:2deg;--top:20px;--left:12px;">
+                        <div class="pin"></div>
+                        <div class="pframe"><img src="./pics/17.jpeg" alt="Memory"></div>
+                    </div>
+                    <div class="polaroid" style="--rot:-3deg;--top:294px;--left:178px;">
+                        <div class="pin"></div>
+                        <div class="pframe"><img src="./pics/18.jpeg" alt="Memory"></div>
+                    </div>
+                </div>
+                <div class="back_page">
+                    <div class="polaroid" style="--rot:-2deg;--top:20px;--left:184px;">
+                        <div class="pin"></div>
+                        <div class="pframe"><img src="./pics/19.jpeg" alt="Memory" class="bimg"></div>
+                    </div>
+                    <div class="polaroid" style="--rot:3deg;--top:294px;--left:18px;">
+                        <div class="pin"></div>
+                        <div class="pframe"><img src="./pics/20.jpeg" alt="Memory" class="bimg"></div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- BACK COVER — Birthday Message -->
+            <div class="back_cover">
+                <div class="bc-inner">
+                    <p class="bc-stars">✦ ✦ ✦</p>
+                    <p class="bc-happy">Happy 22nd Birthday</p>
+                    <p class="bc-name">Akshu 🥳</p>
+                    <div class="bc-line"></div>
+                    <p class="bc-body">
+                        Wishing you a life full of<br>
+                        health, happiness &amp;<br>
+                        everything your heart desires.
+                    </p>
+                    <p class="bc-closing">Love you loads 💕</p>
+                    <p class="bc-stars">✦ ✦ ✦</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Navigation -->
+        <div id="book-nav">
+            <button id="prev-btn" class="nav-btn" disabled>← Prev</button>
+            <div id="page-dots">
+                <span class="dot active" data-pg="-1"></span>
+                <span class="dot" data-pg="0"></span>
+                <span class="dot" data-pg="1"></span>
+                <span class="dot" data-pg="2"></span>
+                <span class="dot" data-pg="3"></span>
+                <span class="dot" data-pg="4"></span>
+                <span class="dot" data-pg="5"></span>
+            </div>
+            <button id="next-btn" class="nav-btn">Next →</button>
+        </div>
+
+    </div>
+
+</body>
+
+</html>
